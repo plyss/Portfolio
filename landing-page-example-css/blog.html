@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .logo {
+            width: 14px;
+        }
+
+        .navheader div a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navhome {
+            padding-left: 10px;
+            margin-right: 10px;
+        }
+
+        .navheader {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .body1 {
+            display: flex;
+            height: 300px;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .leftchildbody1 {
+            width: 98%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .leftchildbody1 div input {
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        .leftchildbody1 div input[type="submit"] {
+            background-color: black;
+            color: white;
+            position: relative;
+            left: -30px;
+        }
+
+        .rightchildbody1 {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .body1 div div,
+        .body2 div div {
+            padding-left: 10px;
+        }
+
+        .navbody {
+            padding: 20px;
+        }
+
+        .navbody a {
+            padding-right: 10px;
+            color: grey;
+            text-decoration: none;
+        }
+
+        .navbody a:active {
+            color: black;
+        }
+
+        .body2 {
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .body2 div img {
+            width: 100%;
+            height: 200px;
+            padding-bottom: 15px;
+        }
+
+        .body2 div {
+            padding: 10px;
+        }
+
+        .body2 div a {
+            color: black;
+            text-decoration: none;
+        }
+
+        #signup {
+            margin-left: 10px;
+            border-radius: 100px;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navheader">
+        <div>
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png"
+                alt="Logo">
+            <a href="blog.html"><strong>Untitled UI</strong></ac>
+                <a class="navhome" href="blog.html"><Strong>Home</Strong></a>
+                <a class="navhome" href=""><strong>Products</strong></a>
+                <a class="navhome" href=""><strong>Resources</strong></a>
+                <a class="navhome" href=""><strong>Pricing</strong></a>
+        </div>
+        <div class="loginnav">
+            <a href=""><strong>Login</strong></a>
+            <a id="signup" href=""><strong>Sign Up</strong></a>
+        </div>
+    </div>
+    <div class="body1">
+        <div class="leftchildbody1">
+            <div>
+                <h1>Untitled Blog</h1>
+            </div>
+            <div>
+                <input type="email" placeholder="Enter your email">
+                <input type="submit" value="Subscribe">
+            </div>
+        </div>
+        <div class="rightchildbody1">
+            <p>New product features, the latest in technology, solutions, and updates.</p>
+        </div>
+    </div>
+    <div class="navbody">
+        <a href=""><strong>View All</strong></a>
+        <a href=""><strong>Design</strong></a>
+        <a href=""><strong>Product</strong></a>
+        <a href=""><strong>Development</strong></a>
+        <a href=""><strong>Customer Support</strong></a>
+        <a href=""><strong>Leadership</strong></a>
+        <a href=""><strong>Management</strong></a>
+        <a href=""><strong>Interviews</strong></a>
+    </div>
+    <div class="body2">
+        <div>
+            <img src="https://visme.co/blog/wp-content/uploads/2016/04/how-to-start-a-presentation-header-wide.jpg"
+                alt="Presentation">
+            <a href=""><strong>UX Review Presentations</strong></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolorum exercitationem, magni culpa
+                aliquam ipsum cumque necessitatibus voluptatum commodi earum repellendus vitae qui nulla quo animi! Enim
+                voluptate minus natus.</p>
+            <a href=""><small>Read Post</small></a>
+        </div>
+        <div>
+            <img src="https://visme.co/blog/wp-content/uploads/2016/04/how-to-start-a-presentation-header-wide.jpg"
+                alt="Presentation">
+            <a href=""><strong>Best Books on scaling your startup</strong></a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit dolorum exercitationem, magni culpa
+                aliquam ipsum cumque necessitatibus voluptatum commodi earum repellendus vitae qui nulla quo animi! Enim
+                voluptate minus natus.</p>
+            <a href=""><small>Read Post</small></a>
+        </div>
+    </div>
+</body>
+
+</html>

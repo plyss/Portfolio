@@ -1,0 +1,4 @@
+com\prodemy\springmvc\dao\MahasiswaDao.class
+com\prodemy\springmvc\controller\MahasiswaController.class
+com\prodemy\springmvc\dao\impl\MahasiswaDaoImpl.class
+com\prodemy\springmvc\model\Mahasiswa.class

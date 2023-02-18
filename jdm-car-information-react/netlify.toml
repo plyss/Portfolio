@@ -1,7 +1,3 @@
 [build]
-  command = "npm run build"
-  timeout = 120
-
-[start]
-  command = "npm run start"
+  command = "npm run start && npm run build"
   timeout = 120

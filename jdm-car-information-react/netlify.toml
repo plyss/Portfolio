@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  timeout = 120
+
+[dev]
+  command = "npm run start"
+  timeout = 120

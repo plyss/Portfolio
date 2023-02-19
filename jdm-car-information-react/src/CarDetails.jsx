@@ -8,13 +8,8 @@ export default function CarDetails() {
     const { carId } = useParams()
     const { carDetail, setCarDetail } = useContext(CarContext)
 
-    const getCarById = async () => {
-        const res = await axios.get(`http://localhost:3000/cars/${carId}`)
-        setCarDetail(res.data)
-    }
-
     useEffect(() => {
-        getCarById()
+        getCarById(setCarDetail)
     }, [carId])
 
     return <>

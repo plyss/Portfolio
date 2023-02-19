@@ -9,3 +9,8 @@ export const getLatestArrivals = async (setLatestArrivals) => {
   const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc')
   setLatestArrivals(res.data)
 }
+
+export const getCarById = async (carId, setCarDetail) => {
+    const res = await axios.get(`https://my-json-server.typicode.com/plyss/jdmmockjson/cars/${carId}`)
+    setCarDetail(res.data)
+  }

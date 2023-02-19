@@ -44,7 +44,7 @@ function MyCar() {
         else await axios.post('https://my-json-server.typicode.com/plyss/jdmmockjson/cars', formInput)
 
         setFormInput({ ...defaultInput })
-        getAllCar()
+        getAllCars(setCars)
         setIsSubmitted(true)
         setIsEdited(false)
     }
@@ -95,7 +95,7 @@ function MyCar() {
     }
 
     useEffect(() => {
-        getAllCar()
+        getAllCars(setCars)
     }, [])
 
     return <>

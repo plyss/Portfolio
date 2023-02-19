@@ -9,7 +9,9 @@ export default function CarDetails() {
     const { carDetail, setCarDetail } = useContext(CarContext)
 
     useEffect(() => {
-        getCarById(setCarDetail)
+        getCarById(carId)
+            .then(res => setCarDetail(res))
+            .catch(error => console.error(error));
     }, [carId])
 
     return <>

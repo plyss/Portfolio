@@ -17,5 +17,5 @@ export const getLatestArrivals = async (setLatestArrivals) => {
 
 export const getCarById = async (carId) => {
     const res = await axios.get(`https://my-json-server.typicode.com/plyss/jdmmockjson/cars/${carId}`)
-    setCarDetail(res.data)
+    return res.data
 }

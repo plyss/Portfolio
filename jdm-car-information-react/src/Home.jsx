@@ -2,24 +2,15 @@ import { useContext, useEffect } from "react"
 import axios from "axios"
 import './App.css'
 import { CarContext } from "./CarProvider"
+import { getNewestCars, getLatestArrivals } from "./ApiRequest"
 
 export default function Home() {
 	const { newestCars, latestArrivals, setNewestCars, setLatestArrivals } = useContext(CarContext)
 
-	const getNewestCars = async () => {
-		const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc')
-		setNewestCars(res.data)
-	}
-
-	const getLatestArrivals = async () => {
-		const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc')
-		setLatestArrivals(res.data)
-	}
-
 	useEffect(() => {
-		getNewestCars()
-		getLatestArrivals()
-	}, [])
+		getNewestCars(setNewestCars)
+		getLatestArrivals(setLatestArrivals)
+	  }, [])
 
 	const ImageCard = ({ car }) => (
 		<div key={car.id} className="image-card-home">

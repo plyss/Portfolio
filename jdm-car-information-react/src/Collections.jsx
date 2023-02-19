@@ -1,9 +1,9 @@
 import { useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
-import axios from "axios"
 import './App.css'
 import { CarContext } from "./CarProvider"
 import { SearchContext } from "./SearchProvider"
+import { getAllCars } from "./ApiRequest"
 
 export default function Collection() {
     const { cars, setCars } = useContext(CarContext)
@@ -13,13 +13,8 @@ export default function Collection() {
         setSearch(e.target.value)
     }
 
-    const getAllCars = async () => {
-        const res = await axios.get('http://localhost:3000/cars')
-        setCars(res.data)
-    }
-
     useEffect(() => {
-        getAllCars()
+        getAllCars(setCars)
     }, [])
 
     const renderImageCard = (car) => (

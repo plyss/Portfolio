@@ -1,5 +1,11 @@
 import axios from "axios"
 
+
+export const getAllCars = async () => {
+    const res = await axios.get('http://localhost:3000/cars')
+    setCars(res.data)
+}
+
 export const getNewestCars = async (setNewestCars) => {
   const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc')
   setNewestCars(res.data)

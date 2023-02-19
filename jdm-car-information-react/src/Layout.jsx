@@ -2,8 +2,7 @@ import { useContext } from "react"
 import { Link, Outlet } from "react-router-dom"
 import './App.css'
 import { ThemeContext } from "./ThemeProvider"
-import { MdOutlineDarkMode } from 'react-icons/all'
-import { MdDarkMode } from 'react-icons/all'
+import { MdOutlineDarkMode, MdDarkMode } from 'react-icons/all'
 
 export default function Layout() {
 	const { theme, toogleTheme } = useContext(ThemeContext)
@@ -21,7 +20,7 @@ export default function Layout() {
 			<div className="navbar-right">
 				<Link to="/admin">Login</Link> &nbsp; | &nbsp;
 				<button onClick={toogleTheme}>{theme === 'light' ?
-					<p><MdOutlineDarkMode /> Light Mode</p> : <p><MdDarkMode /> Dark Mode</p>}</button>
+					<p><MdOutlineDarkMode size={20} />&nbsp;Light Mode</p> : <p className="nr-dark-mode"><MdDarkMode size={20} />&nbsp;Dark Mode</p>}</button>
 			</div>
 		</nav>
 		<hr />

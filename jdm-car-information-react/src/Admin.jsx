@@ -40,30 +40,30 @@ export default function Admin() {
     }
 
     return <>
-        <form className="my-car-form" onSubmit={handleLogin}>
-            <label>
-                User:
-                <input
-                    required
-                    type="text"
-                    value={formInput.username}
-                    onChange={e => handleFormInput("username", e.target.value)}
-                />
-            </label>
-            <br />
-            <label>
-                Password:
-                <input
-                    required
-                    type="password"
-                    value={formInput.password}
-                    onChange={e => handleFormInput("password", e.target.value)}
-                />
-            </label>
-            <br />
-            <button type="submit">
-                Login
-            </button>
-        </form>
+        <div className="admin-form-container">
+            <form className="admin-form" onSubmit={handleLogin}>
+                <label>
+                    Admin:
+                    <input
+                        required
+                        type="text"
+                        value={formInput.username}
+                        onChange={(e) => handleFormInput("username", e.target.value)}
+                    />
+                </label>
+                <br />
+                <label>
+                    Password:
+                    <input
+                        required
+                        type="password"
+                        value={formInput.password}
+                        onChange={(e) => handleFormInput("password", e.target.value)}
+                    />
+                </label>
+                <br />
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </>
 }

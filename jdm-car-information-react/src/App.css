@@ -28,12 +28,22 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
 
+.navbar-right button p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
 }
 
 .navbar-right>button {
     border: none;
     background: none;
+}
+
+.nr-dark-mode {
+    color: var(--on-background)
 }
 
 a {
@@ -112,6 +122,51 @@ a {
     border-radius: 10px;
     border: 1px solid #000;
 }
+
+.admin-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.admin-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    color: var(--on-background)
+}
+
+.admin-form label input {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-form button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077cc;
+    color: #fff;
+    font-weight: bold;
+}
+
 
 .my-car-back {
     color: black;
@@ -194,7 +249,7 @@ a {
     flex: 1;
 }
 
-.second-car-info > p {
+.second-car-info>p {
     color: var(--on-background)
 }
 

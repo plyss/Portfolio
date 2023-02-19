@@ -1,21 +1,31 @@
 import axios from "axios"
 
-export const getAllCars = async (setCars) => {
-    const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars')
-    setCars(res.data)
+const getData = async (url, setFunction) => {
+    try {
+        const res = await axios.get(url)
+        setFunction(res.data)
+    } catch (error) {
+        console.log(error)
+    }
 }
 
-export const getNewestCars = async (setNewestCars) => {
-    const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc')
-    setNewestCars(res.data)
+export const getAllCars = (setCars) => {
+    getData('https://my-json-server.typicode.com/plyss/jdmmockjson/cars', setCars)
 }
 
-export const getLatestArrivals = async (setLatestArrivals) => {
-    const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc')
-    setLatestArrivals(res.data)
+export const getNewestCars = (setNewestCars) => {
+    getData('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc', setNewestCars)
+}
+
+export const getLatestArrivals = (setLatestArrivals) => {
+    getData('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc', setLatestArrivals)
 }
 
 export const getCarById = async (carId) => {
-    const res = await axios.get(`https://my-json-server.typicode.com/plyss/jdmmockjson/cars/${carId}`)
-    return res.data
+    try {
+        const res = await axios.get(`https://my-json-server.typicode.com/plyss/jdmmockjson/cars/${carId}`)
+        return res.data
+    } catch (error) {
+        console.log(error)
+    }
 }

@@ -6,6 +6,7 @@ import { SearchContext } from "./SearchProvider"
 import { useSelector, useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { setLogout } from "./adminSlice"
+import { getAllCars } from "./ApiRequest"
 
 function MyCar() {
     const defaultInput = {
@@ -34,18 +35,13 @@ function MyCar() {
 
     const handleFormInput = (type, value) => setFormInput({ ...formInput, [type]: value })
 
-    const getAllCar = async () => {
-        const res = await axios.get('http://localhost:3000/cars')
-        setCars(res.data)
-    }
-
     const handleSubmit = async (evt) => {
         evt.preventDefault()
 
         const isEdit = !!formInput.id
 
-        if (isEdit) await axios.put('http://localhost:3000/cars/' + formInput.id, formInput)
-        else await axios.post('http://localhost:3000/cars', formInput)
+        if (isEdit) await axios.put('https://my-json-server.typicode.com/plyss/jdmmockjson/cars' + formInput.id, formInput)
+        else await axios.post('https://my-json-server.typicode.com/plyss/jdmmockjson/cars', formInput)
 
         setFormInput({ ...defaultInput })
         getAllCar()
@@ -54,12 +50,12 @@ function MyCar() {
     }
 
     const deleteCar = async id => {
-        await axios.delete('http://localhost:3000/cars/' + id)
-        getAllCar()
+        await axios.delete('https://my-json-server.typicode.com/plyss/jdmmockjson/cars' + id)
+        getAllCars(setCars)
     }
 
     const prepareEdit = async id => {
-        const res = await axios.get('http://localhost:3000/cars/' + id)
+        const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars' + id)
         setFormInput(res.data)
         setIsEdited(true)
         setIsSubmitted(false)

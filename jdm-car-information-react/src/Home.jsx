@@ -7,12 +7,12 @@ export default function Home() {
 	const { newestCars, latestArrivals, setNewestCars, setLatestArrivals } = useContext(CarContext)
 
 	const getNewestCars = async () => {
-		const res = await axios.get('http://localhost:3000/cars?_sort=year&_order=desc')
+		const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc')
 		setNewestCars(res.data)
 	}
 
 	const getLatestArrivals = async () => {
-		const res = await axios.get('http://localhost:3000/cars?_sort=id&_order=desc')
+		const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc')
 		setLatestArrivals(res.data)
 	}
 

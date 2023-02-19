@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import axios from "axios"
 import './App.css'
 import { CarContext } from "./CarProvider"
+import { getCarById } from "./ApiRequest"
 
 export default function CarDetails() {
     const { carId } = useParams()

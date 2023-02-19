@@ -1,5 +1,4 @@
 import { useContext, useEffect } from "react"
-import axios from "axios"
 import './App.css'
 import { CarContext } from "./CarProvider"
 import { getNewestCars, getLatestArrivals } from "./ApiRequest"

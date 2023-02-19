@@ -6,16 +6,16 @@ export const getAllCars = async (setCars) => {
 }
 
 export const getNewestCars = async (setNewestCars) => {
-  const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc')
-  setNewestCars(res.data)
+    const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=year&_order=desc')
+    setNewestCars(res.data)
 }
 
 export const getLatestArrivals = async (setLatestArrivals) => {
-  const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc')
-  setLatestArrivals(res.data)
+    const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars?_sort=id&_order=desc')
+    setLatestArrivals(res.data)
 }
 
-export const getCarById = async (carId, setCarDetail) => {
+export const getCarById = async (setCarDetail) => {
     const res = await axios.get(`https://my-json-server.typicode.com/plyss/jdmmockjson/cars/${carId}`)
     setCarDetail(res.data)
-  }
+}

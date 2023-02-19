@@ -1,7 +1,6 @@
 import axios from "axios"
 
-
-export const getAllCars = async () => {
+export const getAllCars = async (setCars) => {
     const res = await axios.get('https://my-json-server.typicode.com/plyss/jdmmockjson/cars')
     setCars(res.data)
 }
